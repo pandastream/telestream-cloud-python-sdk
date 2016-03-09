@@ -37,8 +37,9 @@ class ModelAPI(object):
     def delete(self, object_id=None):
         object_id = object_id or self.id
         request_path = '{}/{}.json'.format(self.model_type.model_path, object_id)
-        return TelestreamCloudRequest('DELETE', request_path,
+        resp = TelestreamCloudRequest('DELETE', request_path,
                                       self.credentials, data={}).send()
+        return resp.json()
 
 
 class UpdatableMixin(object):
@@ -129,13 +130,15 @@ class Video(TelestreamCloudModel):
 
     def metadata(self):
         path = '{}/{}/metadata.json'.format(self.model_path, self.id)
-        return TelestreamCloudRequest('GET', path,
+        resp = TelestreamCloudRequest('GET', path,
                                       self.credentials, data={}).send()
+        return resp.json()
 
     def delete_source_file(self):
         path = '{}/{}/source.json'.format(self.model_path, self.id)
-        return TelestreamCloudRequest('DELETE', path,
+        resp = TelestreamCloudRequest('DELETE', path,
                                       self.credentials, data={}).send()
+        return resp.json()
 
 
 class Encoding(TelestreamCloudModel):
@@ -150,13 +153,15 @@ class Encoding(TelestreamCloudModel):
 
     def retry(self):
         path = '{}/{}/retry.json'.format(self.model_path, self.id)
-        return TelestreamCloudRequest('POST', path,
+        resp = TelestreamCloudRequest('POST', path,
                                       self.credentials, data={}).send()
+        return resp.json()
 
     def cancel(self):
         path = '{}/{}/cancel.json'.format(self.model_path, self.id)
-        return TelestreamCloudRequest('POST', path,
+        resp = TelestreamCloudRequest('POST', path,
                                       self.credentials, data={}).send()
+        return resp.json()
 
 
 class Profile(UpdatableMixin, TelestreamCloudModel):
