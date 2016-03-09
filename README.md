@@ -106,10 +106,11 @@ To display and change modify Factory notifications:
 
 ```python
 >>> print(factory.get_notifications())
-{'delay': 10, 'url': 'http://super-app.io/notifications', 'events': {'video_created': False, 'encoding_completed': True, 'encoding_progress': True, 'video_encoded': False}}
+{'delay': 10, 'url': 'http://super-app.io/notifications', 'send_video_payload': False, 'events': {'video_created': False, 'encoding_completed': True, 'encoding_progress': True, 'video_encoded': False}}
 
 >>> factory.update_notifications({
     'delay': 13,
+    'send_video_payload': True,
     'events': {
         'video_created': False,
         'video_encoded': False,
