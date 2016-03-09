@@ -104,6 +104,8 @@ class Factory(UpdatableMixin, TelestreamCloudModel):
         return response.json()
 
     def update_notifications(self, conf=None):
+        if 'send_video_payload' in conf:
+            conf['send_video_payload'] = str(conf['send_video_payload']).lower()
         if 'events' in conf:
             for event in conf['events']:
                 conf['events'][event] = str(conf['events'][event]).lower()
