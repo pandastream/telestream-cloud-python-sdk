@@ -114,8 +114,8 @@ class Factory(UpdatableMixin, TelestreamCloudModel):
                                           self.credentials, data=conf).send()
         return response.json()
 
-    def upload_session(self, path, **kwargs):
-        return UploadSession(self.credentials, path, **kwargs)
+    def upload_session(self, path, threads = 8 **kwargs):
+        return UploadSession(self.credentials, path, threads, **kwargs)
 
 
 class Video(TelestreamCloudModel):
