@@ -89,7 +89,7 @@ for encoding in factory.encodings.all():
 # list all profiles
 for profile in factory.profiles.all():
     print(profile)
-    
+
 # get specific video (the same can be done for encoding and profile)
 video = factory.videos.find('video-id')
 ```
@@ -112,10 +112,10 @@ To display and change modify Factory notifications:
     'delay': 13,
     'send_video_payload': True,
     'events': {
-        'video_created': False,
-        'video_encoded': False,
-        'encoding_progress': False,
-        'encoding_completed': False}
+	'video_created': False,
+	'video_encoded': False,
+	'encoding_progress': False,
+	'encoding_completed': False}
   })
 ```
 
@@ -186,8 +186,8 @@ To create new profile:
 
 ```python
 profile = factory.profiles.create(preset_name = "h264",
-                                  name = "h264_1",
-                                  fps = 45)
+				  name = "h264_1",
+				  fps = 45)
 ```
 
 To update already existing profile:
@@ -262,22 +262,23 @@ This is where reasumable uploads come in handy. First you need create a session 
 * `uploaded` - upload completed
 * `aborted` - upload canceled
 * `interrupted` - stopped by user during an interactive session
+Additionally you can select how many threads will send data, for default it's set to 8 threads.
 
 Usage example:
 
 ```python
-us = factory.upload_session('/path/to/your/file.mp4')
+us = factory.upload_session('/path/to/your/file.mp4', threads = 4)
 
 retry_count = 0
 try:
     us.start()
 except Exception as e:
     while retry_count < 5 and us.status != "success":
-        try:
-            time.sleep(5)
-            us.resume()
-        except Exception as e:
-            retry_count += 1
+	try:
+	    time.sleep(5)
+	    us.resume()
+	except Exception as e:
+	    retry_count += 1
 ```
 
 Error handling
