@@ -70,9 +70,10 @@ class UploadSession(object):
                 'Content-Length' : str(min(self.part_size, len(chunk))), },
                                 data = chunk)
 
-            if res.text and loads(res.text)["status"] in ("processing"):
+            if res.text and json.loads(res.text)["status"] in ("processing"):
                 self.status = "uploaded"
-                self.video = Video(self.panda, json_attr=res.json())
+                from .models import Video
+                self.video = Video(self.credentials, res.json())
 
 
 
@@ -100,7 +101,7 @@ class UploadSession(object):
             data = requests.get(self.location)
 
             if data.text:
-                print data.text
+                print (data.text)
                 json_data = json.loads(data.text)
                 if json_data.has_key('missing_parts'):
                     self.missing_parts = ['missing_parts']

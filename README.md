@@ -3,6 +3,22 @@ Python client for Telestream Cloud
 
 This library provides a low-level interface to the REST API of [**Telestream Cloud**](http://cloud.telestream.net), the online video encoding service.
 
+Table of Contents
+-----------------
+
+  * [Table of Contents](README.md#table-of-contents)
+  * [Installation](README.md#installation)
+  * [Usage](README.md#usage)
+    * [Models](README.md#models)
+    * [Factory](README.md#factory)
+    * [Video](README.md#video)
+    * [Encoding](README.md#encoding)
+    * [Profile](README.md#profile)
+    * [REST API examples](README.md#rest-api-examples)
+    * [Error handling](README.md#error-handling)
+    * [Resumable uploads](README.md#resumable-uploads)
+    * [Generating signatures](README.md#generating-signatures)
+
 Installation
 -----
 
@@ -39,18 +55,15 @@ flip = tc.get_resource('flip')
 
 `flip` object gives you access to all your Factories, Videos, Encodings and Profiles.
 
-
-Factories
------
-
-Available relations:
-* `videos` - with `all()`, `find()`, `create()` and `delete()`
-* `encodings` - with `all()`, `find()`, `create()` and `delete()`
-* `profiles` - with `all()`, `find()`, `create()` and `delete()`
+### Models ###
 
 Available methods:
-* `get_notifications()` - retrieves data about notifications
-* `update_notifications()` - updates notifications data
+  * `all()` - list all elements
+  * `find(object_id)` - find element by `object_id`
+  * `create(**kwargs)` - create a new element, to get all parameters visit [**Telestream Cloud API documentation**](https://cloud.telestream.net/docs#api)
+  * `delete(object_id)` - delete element by `object_id`
+
+#### Factories ####
 
 Retrieving Factories
 ```python
@@ -61,6 +74,50 @@ for factory in flip.factories.all():
 # retrieve specific factory
 factory = flip.factories.find('factory-id')
 ```
+
+#### Encodings ####
+
+To create a new encoding for a video that already exists:
+
+```python
+encoding = factory.encodings.create(video_id='video-id', profile_name='h264')
+```
+
+#### Video ####
+
+To upload new video
+
+```python
+# in this case video will be encoded to all profiles available in this factory
+video = factory.videos.create(source_url = 'http://files.com/my_video.mp4')
+
+# use specific profile
+video = factory.videos.create(file = '/path/to/my_video.mp4, profiles = 'h264')
+```
+
+Or just use [Resumable Uploads](README.md#resumable-uploads)
+
+#### Profiles ####
+
+To create new profile:
+
+```python
+profile = factory.profiles.create(preset_name = "h264",
+                                  name = "h264_1",
+                                  fps = 45)
+```
+
+### Factory ###
+
+Available relations:
+* [`videos`](README.md#videos) - with `all()`, `find()`, `create()` and `delete()`
+* [`encodings`](README.md#encodings) - with `all()`, `find()`, `create()` and `delete()`
+* [`profiles`](README.md#profiles) - with `all()`, `find()`, `create()` and `delete()`
+
+Available methods:
+* `get_notifications()` - retrieves data about notifications
+* `update_notifications()` - updates notifications data
+* `save()` - save factory
 
 Displaying Factory details
 ```python
@@ -112,28 +169,26 @@ To display and change modify Factory notifications:
     'delay': 13,
     'send_video_payload': True,
     'events': {
-	'video_created': False,
-	'video_encoded': False,
-	'encoding_progress': False,
-	'encoding_completed': False}
+        'video_created': False,
+        'video_encoded': False,
+        'encoding_progress': False,
+        'encoding_completed': False}
   })
 ```
 
+### Video ###
 
-Videos
------
 Available relations:
 * `encodings` - with `all()`, `find()`, `create()` and `delete()`
 
 Available methods:
 * `metadata()` - retrives metadata of the given video
 * `delete_source_file()` - deletes only the source file from storage
+* `delete()` - delete video from Telestream Cloud database
 
-Retrieving Videos and video details
+
+Retrieving Video and video details
 ```python
->>> factory.videos.all()
-[Video db3f22e498dbbe4bfe631ac39251297e, Video f4c526e2c15a57aebc9721aad258adbd, Video 3fca3b5bc98506178df801281e3e8cf1]
-
 >>> video = factory.videos.find('video-id')
 >>> print(video.details)
 {'audio_sample_rate': 44100, 'mime_type': 'video/mp4', 'original_filename': 'movie.mp4', 'audio_channels': 2, 'video_codec': 'h264', 'video_bitrate': 344, 'extname': '.mp4', 'source_url': 'https://s3.amazonaws.com/bartek-copper/movie.mp4', 'path': '4147fd6f38fb552c38aba1e2b6923892', 'audio_bitrate': 112, 'updated_at': '2015/12/14 14:22:04 +0000', 'created_at': '2015/12/14 14:21:54 +0000', 'height': 240, 'audio_codec': 'aac', 'status': 'success', 'file_size': 805301, 'id': '4147fd6f38fb552c38aba1e2b6923892', 'width': 300, 'duration': 14014, 'fps': 29.97}
@@ -148,19 +203,8 @@ To list all encodings for a selected video:
 [Encoding 6e2a18dfa05645cc759f9b9bd51d8c94, Encoding 0b0cbf12f9541c6c2d5d20fdb494ba17, Encoding 73216519c2ff772c668bb85da5976895]
 ```
 
-To upload new video
 
-```python
-# in this case video will be encoded to all profiles available in this factory
-video = factory.videos.create(source_url='http://files.com/my_video.mp4')
-
-# use specific profile
-video = factory.videos.create(file='/path/to/my_video.mp4', profiles='h264')
-```
-
-
-Encodings
------
+### Encoding ###
 
 Available methods:
 * `video()` - returns corresponding Video object
@@ -169,26 +213,11 @@ Available methods:
 * `cancel()` - cancel encoding
 * `delete()` - deletes requested encoding from Telestream Cloud database and your storage
 
-To create a new encoding for a video that already exists:
-```python
-encoding = factory.encodings.create(video_id='video-id', profile_name='h264')
-```
-
-Profiles
------
-
+### Profile ###
 
 Available methods:
-* `reload()` - retrieves most up-to-date version of the object
-* `delete()` - deletes profile
-
-To create new profile:
-
-```python
-profile = factory.profiles.create(preset_name = "h264",
-				  name = "h264_1",
-				  fps = 45)
-```
+  * `delete()` - delete profile
+  * `save()` - save profile
 
 To update already existing profile:
 ```python
@@ -198,9 +227,7 @@ profile.save()
 ```
 
 
-
-REST API Examples
-----------------
+### REST API examples ###
 
 Retrieve a list of all your videos:
 
@@ -251,8 +278,7 @@ tc.delete('/videos/VIDEO_ID.json');
 tc.delete('/profiles/PROFILE_ID.json');
 ```
 
-Resumable uploads
----------------------
+### Resumable uploads ###
 
 You can upload a local video using `factory.videos.create(file="file.mp4")`. It will attempt to upload the entire file using a single POST request. This is not the best solution for big files, because if the connections brakes right when you reach 95% mark, the entire upload process fails.
 This is where reasumable uploads come in handy. First you need create a session object using `upload_session()`. You can start uploading using `start()` method. If the connection brakes, an exception will be raised. You can decide what to do with your session object using `abort()` or `resume()` methods. Current status of the process will be stored in `status` attribute and can have one of following values:
@@ -274,15 +300,15 @@ try:
     us.start()
 except Exception as e:
     while retry_count < 5 and us.status != "success":
-	try:
-	    time.sleep(5)
-	    us.resume()
-	except Exception as e:
-	    retry_count += 1
+        try:
+            time.sleep(5)
+            us.resume()
+        except Exception as e:
+            retry_count += 1
 ```
 
-Error handling
----------------------
+### Error handling ###
+
 When a `TelestreamCloudException` is raised, it means that something went wrong with the TelestreamCloudRequest you just sent. You can catch this exception an examine no only the error message received, but a full [requests.Response](http://docs.python-requests.org/en/latest/api/?highlight=response#requests.Response) object that will be passed with the exception as `response` attribute:
 
 ```python
@@ -296,8 +322,7 @@ except TelestreamCloudException as e:
     print(e.response.status_code)
 ```
 
-Generating signatures
----------------------
+### Generating signatures ###
 
 All requests to your Telestream Cloud are signed using HMAC-SHA256, based on a timestamp and your secret key. This is handled transparently. However, sometimes you will want to generate only this signature, in order to make a request by means other than this library. This is the case when using the [JavaScript panda_uploader](https://github.com/pandastream/panda_uploader).
 

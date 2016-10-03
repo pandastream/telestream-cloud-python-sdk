@@ -86,6 +86,12 @@ class TelestreamCloudModel(object):
         object.__setattr__(self, 'details', obj.details)
         self._set_object_attributes(obj.details)
 
+    def delete(self):
+        path = "%s/%s.json" % (self.model_path, self.id)
+        response = TelestreamCloudRequest('DELETE', path,
+                                          self.credentials, data={}).send()
+
+        return response.json()
 
 class Factory(UpdatableMixin, TelestreamCloudModel):
     model_path = '/factories'
@@ -98,6 +104,12 @@ class Factory(UpdatableMixin, TelestreamCloudModel):
         self.videos = ModelAPI(self.credentials, Video)
         self.encodings = ModelAPI(self.credentials, Encoding)
         self.profiles = ModelAPI(self.credentials, Profile)
+
+    def __getattribute__(self, name):
+        # It is simpler to remove one method than add 3 times
+        if name in ['delete']:
+            raise AttributeError("'Factory' object has no attribute '%s'" % name)
+        return super(Factory, self).__getattribute__(name)
 
     def get_notifications(self):
         response = TelestreamCloudRequest('GET', '/notifications.json',
