@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='telestream-cloud',
-    version='1.1.1',
+    version='1.1.2',
     description='A Python implementation of Telestream Cloud REST interface',
     author='Telestream Cloud',
     author_email='cloudsupport@telestream.net',

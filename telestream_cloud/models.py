@@ -44,14 +44,17 @@ class ModelAPI(object):
 
 class UpdatableMixin(object):
 
+    const_keys = ['credentials', 'details', 'encodings', 'profiles', 'videos']
+
     def __setattr__(self, *args, **kwargs):
         return object.__setattr__(self, *args, **kwargs)
 
     def save(self):
         updated_values = {}
 
-        for key in self.details:
-            if self.details[key] != getattr(self, key):
+        for key in set(self.__dict__.keys()) - set(self.const_keys):
+            if not key in self.details or \
+               self.details[key] != getattr(self, key):
                 updated_values[key] = getattr(self, key)
 
         path = '{}/{}.json'.format(self.model_path, self.id)
