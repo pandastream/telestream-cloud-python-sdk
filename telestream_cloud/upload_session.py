@@ -43,8 +43,8 @@ class UploadSession(object):
                                      file_name, "", threads = threads))
 
         for key in self.extra_files:
-            self.files.append(UploadFile(self.location, int(self.extra_files[key]["Parts"]), int(self.extra_files[key]["PartSize"]),
-                                         self.extra_files[key]["Name"],  self.extra_files[key]["Tag"], threads = threads))
+            self.files.append(UploadFile(self.location, int(self.extra_files[key]["parts"]), int(self.extra_files[key]["part_size"]),
+                                         self.extra_files[key]["name"],  self.extra_files[key]["tag"], threads = threads))
 
 
     def __parse_extra_files(self, files):
