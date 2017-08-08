@@ -250,7 +250,7 @@ Create a new profile:
 tc.post('/profiles.json', {
     'title':    'My custom profile',
     'category': 'desktop',
-    'extname':  'mp4',
+    'extname':  '.mp4',
     'width':    320,
     'height':   240,
     'command':  'ffmpeg -i $input_file$ -f mp4 -b 128k $resolution_and_padding$ -y $output_file',
