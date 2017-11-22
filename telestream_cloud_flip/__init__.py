@@ -46,6 +46,7 @@ from .models.upload_session import UploadSession
 from .models.video import Video
 from .models.video_metadata import VideoMetadata
 from .models.video_upload_body import VideoUploadBody
+from .models.uploader import Uploader
 
 # import apis into sdk package
 from .apis.flip_api import FlipApi

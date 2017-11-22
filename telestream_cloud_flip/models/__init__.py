@@ -46,3 +46,4 @@ from .upload_session import UploadSession
 from .video import Video
 from .video_metadata import VideoMetadata
 from .video_upload_body import VideoUploadBody
+from .uploader import Uploader
