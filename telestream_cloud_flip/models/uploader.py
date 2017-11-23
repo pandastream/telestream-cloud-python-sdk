@@ -55,13 +55,13 @@ class Uploader(object):
                 if upload_file.status != 'uploaded':
                     upload_file.start(pos)
 
-                if upload_file.video:
-                    self.video = upload_file.video
+                if upload_file.video_id:
+                    self.video_id = upload_file.video_id
 
             if self.is_uploaded():
                 self.status = 'uploaded'
 
-            return self.video
+            return self.video_id
 
         elif self.status == 'created':
             raise KeyError("Not initialized")

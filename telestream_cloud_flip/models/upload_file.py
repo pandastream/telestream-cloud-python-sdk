@@ -15,7 +15,7 @@ class UploadFile(object):
         self.missing_parts = [i for i in range(self.parts - 1, -1, -1)]
 
         self.status = "initialized"
-        self.video = None
+        self.video_id = None
         self.error_message = None
 
         self.n_threads = threads
@@ -58,8 +58,7 @@ class UploadFile(object):
 
             if res.text and json.loads(res.text)["status"] in ("processing"):
                 self.status = "uploaded"
-                from .models import Video
-                self.video = Video(self.credentials, res.json())
+                self.video_id = res.json().get('id')
 
 
     def start(self, pos=0):
