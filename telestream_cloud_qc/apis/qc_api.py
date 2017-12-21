@@ -273,7 +273,7 @@ class QcApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Options options:
+        :param Data data:
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -298,13 +298,13 @@ class QcApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param Options options:
+        :param Data data:
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['options']
+        all_params = ['data']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -333,8 +333,8 @@ class QcApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'options' in params:
-            body_params = params['options']
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])
@@ -806,7 +806,7 @@ class QcApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str project: (required)
-        :param Options1 options:
+        :param Data1 data:
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -832,13 +832,13 @@ class QcApi(object):
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param str project: (required)
-        :param Options1 options:
+        :param Data1 data:
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project', 'options']
+        all_params = ['project', 'data']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -872,8 +872,8 @@ class QcApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'options' in params:
-            body_params = params['options']
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
             select_header_accept(['application/json'])

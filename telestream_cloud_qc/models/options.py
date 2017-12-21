@@ -31,99 +31,19 @@ class Options(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'template': 'str',
-        'options': 'Options'
+        
     }
 
     attribute_map = {
-        'name': 'name',
-        'template': 'template',
-        'options': 'options'
+        
     }
 
-    def __init__(self, name=None, template=None, options=None):
+    def __init__(self):
         """
         Options - a model defined in Swagger
         """
 
-        self._name = None
-        self._template = None
-        self._options = None
 
-        if name is not None:
-          self.name = name
-        if template is not None:
-          self.template = template
-        if options is not None:
-          self.options = options
-
-    @property
-    def name(self):
-        """
-        Gets the name of this Options.
-        Human-readable identifier of a Project.
-
-        :return: The name of this Options.
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """
-        Sets the name of this Options.
-        Human-readable identifier of a Project.
-
-        :param name: The name of this Options.
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def template(self):
-        """
-        Gets the template of this Options.
-        Name of QC template.
-
-        :return: The template of this Options.
-        :rtype: str
-        """
-        return self._template
-
-    @template.setter
-    def template(self, template):
-        """
-        Sets the template of this Options.
-        Name of QC template.
-
-        :param template: The template of this Options.
-        :type: str
-        """
-
-        self._template = template
-
-    @property
-    def options(self):
-        """
-        Gets the options of this Options.
-
-        :return: The options of this Options.
-        :rtype: Options
-        """
-        return self._options
-
-    @options.setter
-    def options(self, options):
-        """
-        Sets the options of this Options.
-
-        :param options: The options of this Options.
-        :type: Options
-        """
-
-        self._options = options
 
     def to_dict(self):
         """

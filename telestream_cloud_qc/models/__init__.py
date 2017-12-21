@@ -17,6 +17,8 @@ from __future__ import absolute_import
 from .alert import Alert
 from .audio_stream import AudioStream
 from .container import Container
+from .data import Data
+from .data_1 import Data1
 from .extra_file import ExtraFile
 from .job import Job
 from .job_data import JobData
@@ -25,7 +27,6 @@ from .job_details_result import JobDetailsResult
 from .jobs_collection import JobsCollection
 from .media import Media
 from .options import Options
-from .options_1 import Options1
 from .project import Project
 from .proxy import Proxy
 from .upload_session import UploadSession

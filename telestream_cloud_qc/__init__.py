@@ -17,6 +17,8 @@ from __future__ import absolute_import
 from .models.alert import Alert
 from .models.audio_stream import AudioStream
 from .models.container import Container
+from .models.data import Data
+from .models.data_1 import Data1
 from .models.extra_file import ExtraFile
 from .models.job import Job
 from .models.job_data import JobData
@@ -25,7 +27,6 @@ from .models.job_details_result import JobDetailsResult
 from .models.jobs_collection import JobsCollection
 from .models.media import Media
 from .models.options import Options
-from .models.options_1 import Options1
 from .models.project import Project
 from .models.proxy import Proxy
 from .models.upload_session import UploadSession

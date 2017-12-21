@@ -147,7 +147,7 @@ class Project(object):
     def template(self):
         """
         Gets the template of this Project.
-        Name of QC template.
+        Name of QC template 2.
 
         :return: The template of this Project.
         :rtype: str
@@ -158,7 +158,7 @@ class Project(object):
     def template(self, template):
         """
         Sets the template of this Project.
-        Name of QC template.
+        Name of QC template 2.
 
         :param template: The template of this Project.
         :type: str

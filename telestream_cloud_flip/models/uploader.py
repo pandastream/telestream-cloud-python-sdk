@@ -37,7 +37,7 @@ class Uploader(object):
                 self.__prepare_files(upload_session)
                 self.status = 'initialized'
             except ApiException as e:
-                print("Exception when calling FlipApi->upload_video: %s\n" % e)
+                print("Exception when calling %s->upload_video: %s\n" % (type(self.api_client).__name__, e))
                 self.status = 'error'
         else:
             raise TelestreamCloudException('Already initialized')
