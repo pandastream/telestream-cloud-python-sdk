@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **extra_files** | [**list[ExtraFile]**](ExtraFile.md) | A list of names of additional files that will be uploaded. | [optional] 
 **profiles** | **str** | A comma-separated list of profile names or IDs to be used during encoding. Alternatively, specify none so no encodings will created right away. | [optional] 
 **path_format** | **str** |  | [optional] 
-**payload** | **dict(str, str)** |  | [optional] 
+**payload** | **str** | Payload is an arbitrary text of length 256 or shorter that you can store along the Video. It is typically used to retain an association with one of your own DB record ID. | [optional] 
 **extra_variables** | **dict(str, str)** |  | [optional] 
 **watermark_url** | **str** | URL pointing to an image that will be used asa watermark. | [optional] 
 **watermark_left** | **str** | Determines distance between the left edge of a video and the left edge of a watermark image. Can be specified in pixels or percents. This parameter can be set only if watermark_right is not. | [optional] 

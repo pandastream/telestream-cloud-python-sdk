@@ -1,6 +1,6 @@
 # telestream_cloud_flip.FlipApi
 
-All URIs are relative to *http://localhost:5555/api/flip/3.1*
+All URIs are relative to *https://api.cloud.telestream.net/api/flip/3.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**create_encoding**](FlipApi.md#create_encoding) | **POST** /encodings.json | Creates an Encoding
 [**create_factory**](FlipApi.md#create_factory) | **POST** /factories.json | Creates a new factory
 [**create_profile**](FlipApi.md#create_profile) | **POST** /profiles.json | Creates a Profile
+[**create_video**](FlipApi.md#create_video) | **POST** /videos.json | Creates a Video from a provided source_url.
 [**create_workorder**](FlipApi.md#create_workorder) | **POST** /workorders.json | Creates a Workorder.
 [**delete_encoding**](FlipApi.md#delete_encoding) | **DELETE** /encodings/{id}.json | Deletes an Encoding from both Telestream Cloud and your storage. Returns an information whether the operation was successful.
 [**delete_profile**](FlipApi.md#delete_profile) | **DELETE** /profiles/{id}.json | Deletes a given Profile
@@ -307,6 +308,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Profile**](Profile.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_video**
+> Video create_video(factory_id, create_video_body)
+
+Creates a Video from a provided source_url.
+
+### Example 
+```python
+from __future__ import print_function
+import time
+import telestream_cloud_flip
+from telestream_cloud_flip.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = telestream_cloud_flip.FlipApi()
+factory_id = 'factory_id_example' # str | Id of a Factory.
+create_video_body = telestream_cloud_flip.CreateVideoBody() # CreateVideoBody | 
+
+try: 
+    # Creates a Video from a provided source_url.
+    api_response = api_instance.create_video(factory_id, create_video_body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling FlipApi->create_video: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **factory_id** | **str**| Id of a Factory. | 
+ **create_video_body** | [**CreateVideoBody**](CreateVideoBody.md)|  | 
+
+### Return type
+
+[**Video**](Video.md)
 
 ### Authorization
 

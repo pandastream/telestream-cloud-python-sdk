@@ -71,6 +71,14 @@ class TestFlipApi(unittest.TestCase):
         """
         pass
 
+    def test_create_video(self):
+        """
+        Test case for create_video
+
+        Creates a Video from a provided source_url.
+        """
+        pass
+
     def test_create_workorder(self):
         """
         Test case for create_workorder
