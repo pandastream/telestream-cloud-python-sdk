@@ -25,7 +25,7 @@ This example show uploading media file to flip service. If you want to use other
     profiles = "h264,imx"
     filepath = "/tmp/video.mp4"
 
-    flip.configuration.api_key['X-Api-Kye'] = api_key
+    flip.configuration.api_key['X-Api-Key'] = api_key
     client = flip.FlipApi()
 
     upload = flip.Uploader(factory, client, filepath, profiles)
