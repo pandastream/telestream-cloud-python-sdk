@@ -3,7 +3,7 @@
 """
     Qc API
 
-    QC API
+    QC API  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: cloudsupport@telestream.net
@@ -13,17 +13,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_qc
+from telestream_cloud_qc.models.jobs_collection import JobsCollection  # noqa: E501
 from telestream_cloud_qc.rest import ApiException
-from telestream_cloud_qc.models.jobs_collection import JobsCollection
 
 
 class TestJobsCollection(unittest.TestCase):
-    """ JobsCollection unit test stubs """
+    """JobsCollection unit test stubs"""
 
     def setUp(self):
         pass
@@ -32,11 +30,9 @@ class TestJobsCollection(unittest.TestCase):
         pass
 
     def testJobsCollection(self):
-        """
-        Test JobsCollection
-        """
+        """Test JobsCollection"""
         # FIXME: construct object with mandatory attributes with example values
-        #model = telestream_cloud_qc.models.jobs_collection.JobsCollection()
+        # model = telestream_cloud_qc.models.jobs_collection.JobsCollection()  # noqa: E501
         pass
 
 

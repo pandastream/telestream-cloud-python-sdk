@@ -3,7 +3,7 @@
 """
     Flip API
 
-    Description
+    Description  # noqa: E501
 
     OpenAPI spec version: 3.1.0
     Contact: cloudsupport@telestream.net
@@ -13,317 +13,278 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_flip
+from telestream_cloud_flip.api.flip_api import FlipApi  # noqa: E501
 from telestream_cloud_flip.rest import ApiException
-from telestream_cloud_flip.apis.flip_api import FlipApi
 
 
 class TestFlipApi(unittest.TestCase):
-    """ FlipApi unit test stubs """
+    """FlipApi unit test stubs"""
 
     def setUp(self):
-        self.api = telestream_cloud_flip.apis.flip_api.FlipApi()
+        self.api = telestream_cloud_flip.api.flip_api.FlipApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
     def test_cancel_encoding(self):
-        """
-        Test case for cancel_encoding
+        """Test case for cancel_encoding
 
-        Cancels an Encoding.
+        Cancels an Encoding.  # noqa: E501
         """
         pass
 
     def test_copy_profile(self):
-        """
-        Test case for copy_profile
+        """Test case for copy_profile
 
-        Copies a given Profile
+        Copies a given Profile  # noqa: E501
         """
         pass
 
     def test_create_encoding(self):
-        """
-        Test case for create_encoding
+        """Test case for create_encoding
 
-        Creates an Encoding
+        Creates an Encoding  # noqa: E501
         """
         pass
 
     def test_create_factory(self):
-        """
-        Test case for create_factory
+        """Test case for create_factory
 
-        Creates a new factory
+        Creates a new factory  # noqa: E501
         """
         pass
 
     def test_create_profile(self):
-        """
-        Test case for create_profile
+        """Test case for create_profile
 
-        Creates a Profile
+        Creates a Profile  # noqa: E501
         """
         pass
 
     def test_create_video(self):
-        """
-        Test case for create_video
+        """Test case for create_video
 
-        Creates a Video from a provided source_url.
+        Creates a Video from a provided source_url.  # noqa: E501
         """
         pass
 
     def test_create_workorder(self):
-        """
-        Test case for create_workorder
+        """Test case for create_workorder
 
-        Creates a Workorder.
+        Creates a Workorder.  # noqa: E501
         """
         pass
 
     def test_delete_encoding(self):
-        """
-        Test case for delete_encoding
+        """Test case for delete_encoding
 
-        Deletes an Encoding from both Telestream Cloud and your storage. Returns an information whether the operation was successful.
+        Deletes an Encoding from both Telestream Cloud and your storage. Returns an information whether the operation was successful.  # noqa: E501
         """
         pass
 
     def test_delete_profile(self):
-        """
-        Test case for delete_profile
+        """Test case for delete_profile
 
-        Deletes a given Profile
+        Deletes a given Profile  # noqa: E501
         """
         pass
 
     def test_delete_video(self):
-        """
-        Test case for delete_video
+        """Test case for delete_video
 
-        Deletes a Video object.
+        Deletes a Video object.  # noqa: E501
         """
         pass
 
     def test_delete_video_source(self):
-        """
-        Test case for delete_video_source
+        """Test case for delete_video_source
 
-        Delete a video's source file.
+        Delete a video's source file.  # noqa: E501
         """
         pass
 
     def test_encoding(self):
-        """
-        Test case for encoding
+        """Test case for encoding
 
-        Returns an Encoding object.
+        Returns an Encoding object.  # noqa: E501
         """
         pass
 
     def test_encodings(self):
-        """
-        Test case for encodings
+        """Test case for encodings
 
-        Returns a list of Encoding objects
+        Returns a list of Encoding objects  # noqa: E501
         """
         pass
 
     def test_encodings_count(self):
-        """
-        Test case for encodings_count
+        """Test case for encodings_count
 
-        Returns a number of Encoding objects created using a given factory.
+        Returns a number of Encoding objects created using a given factory.  # noqa: E501
         """
         pass
 
     def test_factories(self):
-        """
-        Test case for factories
+        """Test case for factories
 
-        Returns a collection of Factory objects.
+        Returns a collection of Factory objects.  # noqa: E501
         """
         pass
 
     def test_factory(self):
-        """
-        Test case for factory
+        """Test case for factory
 
-        Returns a Factory object.
+        Returns a Factory object.  # noqa: E501
         """
         pass
 
     def test_notifications(self):
-        """
-        Test case for notifications
+        """Test case for notifications
 
-        Returns a Factory's notification settings.
+        Returns a Factory's notification settings.  # noqa: E501
         """
         pass
 
     def test_profile(self):
-        """
-        Test case for profile
+        """Test case for profile
 
-        Returns a Profile object.
+        Returns a Profile object.  # noqa: E501
         """
         pass
 
     def test_profile_encodings(self):
-        """
-        Test case for profile_encodings
+        """Test case for profile_encodings
 
-        Returns a list of Encodings that belong to a Profile.
+        Returns a list of Encodings that belong to a Profile.  # noqa: E501
         """
         pass
 
     def test_profiles(self):
-        """
-        Test case for profiles
+        """Test case for profiles
 
-        Returns a collection of Profile objects.
+        Returns a collection of Profile objects.  # noqa: E501
         """
         pass
 
     def test_queued_videos(self):
-        """
-        Test case for queued_videos
+        """Test case for queued_videos
 
-        Returns a collection of Video objects queued for encoding.
+        Returns a collection of Video objects queued for encoding.  # noqa: E501
         """
         pass
 
     def test_resubmit_video(self):
-        """
-        Test case for resubmit_video
+        """Test case for resubmit_video
 
-        Resubmits a video to encode.
+        Resubmits a video to encode.  # noqa: E501
         """
         pass
 
     def test_retry_encoding(self):
-        """
-        Test case for retry_encoding
+        """Test case for retry_encoding
 
-        Retries a failed encoding.
+        Retries a failed encoding.  # noqa: E501
         """
         pass
 
     def test_signed_encoding_url(self):
-        """
-        Test case for signed_encoding_url
+        """Test case for signed_encoding_url
 
-        Returns a signed url pointing to an Encoding.
+        Returns a signed url pointing to an Encoding.  # noqa: E501
         """
         pass
 
     def test_signed_encoding_urls(self):
-        """
-        Test case for signed_encoding_urls
+        """Test case for signed_encoding_urls
 
-        Returns a list of signed urls pointing to an Encoding's outputs.
+        Returns a list of signed urls pointing to an Encoding's outputs.  # noqa: E501
         """
         pass
 
     def test_signed_video_url(self):
-        """
-        Test case for signed_video_url
+        """Test case for signed_video_url
 
-        Returns a signed url pointing to a Video.
+        Returns a signed url pointing to a Video.  # noqa: E501
         """
         pass
 
     def test_toggle_factory_sync(self):
-        """
-        Test case for toggle_factory_sync
+        """Test case for toggle_factory_sync
 
-        Toggles synchronisation settings.
+        Toggles synchronisation settings.  # noqa: E501
         """
         pass
 
     def test_update_encoding(self):
-        """
-        Test case for update_encoding
+        """Test case for update_encoding
 
-        Updates an Encoding
+        Updates an Encoding  # noqa: E501
         """
         pass
 
     def test_update_factory(self):
-        """
-        Test case for update_factory
+        """Test case for update_factory
 
-        Updates a Factory's settings. Returns a Factory object.
+        Updates a Factory's settings. Returns a Factory object.  # noqa: E501
         """
         pass
 
     def test_update_notifications(self):
-        """
-        Test case for update_notifications
+        """Test case for update_notifications
 
-        Updates a Factory's notification settings.
+        Updates a Factory's notification settings.  # noqa: E501
         """
         pass
 
     def test_update_profile(self):
-        """
-        Test case for update_profile
+        """Test case for update_profile
 
-        Updates a given Profile
+        Updates a given Profile  # noqa: E501
         """
         pass
 
     def test_upload_video(self):
-        """
-        Test case for upload_video
+        """Test case for upload_video
 
-        Creates an upload session.
+        Creates an upload session.  # noqa: E501
         """
         pass
 
     def test_video(self):
-        """
-        Test case for video
+        """Test case for video
 
-        Returns a Video object.
+        Returns a Video object.  # noqa: E501
         """
         pass
 
     def test_video_encodings(self):
-        """
-        Test case for video_encodings
+        """Test case for video_encodings
 
-        Returns a list of Encodings that belong to a Video.
+        Returns a list of Encodings that belong to a Video.  # noqa: E501
         """
         pass
 
     def test_video_metadata(self):
-        """
-        Test case for video_metadata
+        """Test case for video_metadata
 
-        Returns a Video's metadata
+        Returns a Video's metadata  # noqa: E501
         """
         pass
 
     def test_videos(self):
-        """
-        Test case for videos
+        """Test case for videos
 
-        Returns a collection of Video objects.
+        Returns a collection of Video objects.  # noqa: E501
         """
         pass
 
     def test_workflows(self):
-        """
-        Test case for workflows
+        """Test case for workflows
 
-        Returns a collection of Workflows that belong to a Factory.
+        Returns a collection of Workflows that belong to a Factory.  # noqa: E501
         """
         pass
 

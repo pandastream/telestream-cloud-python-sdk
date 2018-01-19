@@ -3,7 +3,7 @@
 """
     Qc API
 
-    QC API
+    QC API  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: cloudsupport@telestream.net
@@ -13,17 +13,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_qc
+from telestream_cloud_qc.models.container import Container  # noqa: E501
 from telestream_cloud_qc.rest import ApiException
-from telestream_cloud_qc.models.container import Container
 
 
 class TestContainer(unittest.TestCase):
-    """ Container unit test stubs """
+    """Container unit test stubs"""
 
     def setUp(self):
         pass
@@ -32,11 +30,9 @@ class TestContainer(unittest.TestCase):
         pass
 
     def testContainer(self):
-        """
-        Test Container
-        """
+        """Test Container"""
         # FIXME: construct object with mandatory attributes with example values
-        #model = telestream_cloud_qc.models.container.Container()
+        # model = telestream_cloud_qc.models.container.Container()  # noqa: E501
         pass
 
 

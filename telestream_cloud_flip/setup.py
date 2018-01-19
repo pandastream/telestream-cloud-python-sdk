@@ -3,7 +3,7 @@
 """
     Flip API
 
-    Description
+    Description  # noqa: E501
 
     OpenAPI spec version: 3.1.0
     Contact: cloudsupport@telestream.net
@@ -11,8 +11,7 @@
 """
 
 
-import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "telestream-cloud-flip"
 VERSION = "1.0.0"
@@ -36,6 +35,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Description
+    Description  # noqa: E501
     """
 )

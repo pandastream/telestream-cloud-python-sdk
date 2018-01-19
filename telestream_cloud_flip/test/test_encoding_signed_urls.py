@@ -3,7 +3,7 @@
 """
     Flip API
 
-    Description
+    Description  # noqa: E501
 
     OpenAPI spec version: 3.1.0
     Contact: cloudsupport@telestream.net
@@ -13,17 +13,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_flip
+from telestream_cloud_flip.models.encoding_signed_urls import EncodingSignedUrls  # noqa: E501
 from telestream_cloud_flip.rest import ApiException
-from telestream_cloud_flip.models.encoding_signed_urls import EncodingSignedUrls
 
 
 class TestEncodingSignedUrls(unittest.TestCase):
-    """ EncodingSignedUrls unit test stubs """
+    """EncodingSignedUrls unit test stubs"""
 
     def setUp(self):
         pass
@@ -32,11 +30,9 @@ class TestEncodingSignedUrls(unittest.TestCase):
         pass
 
     def testEncodingSignedUrls(self):
-        """
-        Test EncodingSignedUrls
-        """
+        """Test EncodingSignedUrls"""
         # FIXME: construct object with mandatory attributes with example values
-        #model = telestream_cloud_flip.models.encoding_signed_urls.EncodingSignedUrls()
+        # model = telestream_cloud_flip.models.encoding_signed_urls.EncodingSignedUrls()  # noqa: E501
         pass
 
 

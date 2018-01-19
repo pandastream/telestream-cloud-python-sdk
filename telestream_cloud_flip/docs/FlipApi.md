@@ -48,7 +48,7 @@ Method | HTTP request | Description
 
 Cancels an Encoding.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -57,16 +57,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Cancels an Encoding.
     api_response = api_instance.cancel_encoding(id, factory_id)
     pprint(api_response)
@@ -101,7 +102,7 @@ Name | Type | Description  | Notes
 
 Copies a given Profile
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -110,18 +111,19 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Profile.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 copy_profile_body = telestream_cloud_flip.CopyProfileBody() # CopyProfileBody | 
 expand = true # bool | If expand option is set Profile objects will contain all command parameters, even if their value is default. By default this is not set. (optional)
 
-try: 
+try:
     # Copies a given Profile
     api_response = api_instance.copy_profile(id, factory_id, copy_profile_body, expand=expand)
     pprint(api_response)
@@ -158,7 +160,7 @@ Name | Type | Description  | Notes
 
 Creates an Encoding
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -167,18 +169,19 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 create_encoding_body = telestream_cloud_flip.CreateEncodingBody() # CreateEncodingBody | 
 screenshots = true # bool | Determines whether the response will include screenshots. By default this is not set. (optional)
 precise_status = true # bool | Determines whether the response will include a precise status. By default this is not set. (optional)
 
-try: 
+try:
     # Creates an Encoding
     api_response = api_instance.create_encoding(factory_id, create_encoding_body, screenshots=screenshots, precise_status=precise_status)
     pprint(api_response)
@@ -215,7 +218,7 @@ Name | Type | Description  | Notes
 
 Creates a new factory
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -224,16 +227,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 create_factory_body = telestream_cloud_flip.FactoryBody() # FactoryBody | 
 with_storage_provider = true # bool | if set to `true`, results will include a storage provider's id (optional)
 
-try: 
+try:
     # Creates a new factory
     api_response = api_instance.create_factory(create_factory_body, with_storage_provider=with_storage_provider)
     pprint(api_response)
@@ -268,7 +272,7 @@ Name | Type | Description  | Notes
 
 Creates a Profile
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -277,18 +281,19 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 create_profile_body = telestream_cloud_flip.ProfileBody() # ProfileBody | 
 exclude_advanced_services = true # bool |  (optional)
 expand = true # bool | If expand option is set Profile objects will contain all command parameters, even if their value is default. By default it is not set. (optional)
 
-try: 
+try:
     # Creates a Profile
     api_response = api_instance.create_profile(factory_id, create_profile_body, exclude_advanced_services=exclude_advanced_services, expand=expand)
     pprint(api_response)
@@ -325,7 +330,7 @@ Name | Type | Description  | Notes
 
 Creates a Video from a provided source_url.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -334,16 +339,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 create_video_body = telestream_cloud_flip.CreateVideoBody() # CreateVideoBody | 
 
-try: 
+try:
     # Creates a Video from a provided source_url.
     api_response = api_instance.create_video(factory_id, create_video_body)
     pprint(api_response)
@@ -378,7 +384,7 @@ Name | Type | Description  | Notes
 
 Creates a Workorder.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -387,18 +393,19 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 profile_id = 'profile_id_example' # str | Id of a Profile. (optional)
 file = '/path/to/file.txt' # file | Input file. (optional)
 source_url = 'source_url_example' # str | URL pointing to an input file. (optional)
 
-try: 
+try:
     # Creates a Workorder.
     api_instance.create_workorder(factory_id, profile_id=profile_id, file=file, source_url=source_url)
 except ApiException as e:
@@ -434,7 +441,7 @@ void (empty response body)
 
 Deletes an Encoding from both Telestream Cloud and your storage. Returns an information whether the operation was successful.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -443,16 +450,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Deletes an Encoding from both Telestream Cloud and your storage. Returns an information whether the operation was successful.
     api_response = api_instance.delete_encoding(id, factory_id)
     pprint(api_response)
@@ -487,7 +495,7 @@ Name | Type | Description  | Notes
 
 Deletes a given Profile
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -496,16 +504,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Profile
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Deletes a given Profile
     api_response = api_instance.delete_profile(id, factory_id)
     pprint(api_response)
@@ -540,7 +549,7 @@ Name | Type | Description  | Notes
 
 Deletes a Video object.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -549,16 +558,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Video.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Deletes a Video object.
     api_response = api_instance.delete_video(id, factory_id)
     pprint(api_response)
@@ -593,7 +603,7 @@ Name | Type | Description  | Notes
 
 Delete a video's source file.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -602,16 +612,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Video.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Delete a video's source file.
     api_response = api_instance.delete_video_source(id, factory_id)
     pprint(api_response)
@@ -646,7 +657,7 @@ Name | Type | Description  | Notes
 
 Returns an Encoding object.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -655,18 +666,19 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 screenshots = true # bool | Determines whether the response will include screenshots. By default this is not set. (optional)
 precise_status = true # bool | Determines whether the response will include a precise status. By default this is not set. (optional)
 
-try: 
+try:
     # Returns an Encoding object.
     api_response = api_instance.encoding(id, factory_id, screenshots=screenshots, precise_status=precise_status)
     pprint(api_response)
@@ -703,7 +715,7 @@ Name | Type | Description  | Notes
 
 Returns a list of Encoding objects
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -712,12 +724,13 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 video_id = 'video_id_example' # str | Id of a Video. When specified, the resulting list will contain videos that belong to the Video. (optional)
 status = 'status_example' # str | One of `success`, `fail`, `processing`. When specified, the resulting list will contain ecodings filtered by status. (optional)
@@ -728,7 +741,7 @@ per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 screenshots = true # bool | Determines whether the response will include screenshots. By default this is not set. (optional)
 precise_status = true # bool | Determines whether the response will include a precise status. By default this is not set. (optional)
 
-try: 
+try:
     # Returns a list of Encoding objects
     api_response = api_instance.encodings(factory_id, video_id=video_id, status=status, profile_id=profile_id, profile_name=profile_name, page=page, per_page=per_page, screenshots=screenshots, precise_status=precise_status)
     pprint(api_response)
@@ -770,7 +783,7 @@ Name | Type | Description  | Notes
 
 Returns a number of Encoding objects created using a given factory.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -779,15 +792,16 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a number of Encoding objects created using a given factory.
     api_response = api_instance.encodings_count(factory_id)
     pprint(api_response)
@@ -823,7 +837,7 @@ Returns a collection of Factory objects.
 
 Returns a collection of Factory objects.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -832,17 +846,18 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 page = 56 # int | A page to be fetched. Default is `1`. (optional)
 per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 with_storage_provider = true # bool | if set to `true`, results will include a storage provider's id (optional)
 
-try: 
+try:
     # Returns a collection of Factory objects.
     api_response = api_instance.factories(page=page, per_page=per_page, with_storage_provider=with_storage_provider)
     pprint(api_response)
@@ -880,7 +895,7 @@ Returns a Factory object.
 
 Returns a Factory object.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -889,16 +904,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | id of a factory
 with_storage_provider = true # bool | if set to `true`, results will include a storage provider's id (optional)
 
-try: 
+try:
     # Returns a Factory object.
     api_response = api_instance.factory(id, with_storage_provider=with_storage_provider)
     pprint(api_response)
@@ -933,7 +949,7 @@ Name | Type | Description  | Notes
 
 Returns a Factory's notification settings.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -942,15 +958,16 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a Factory's notification settings.
     api_response = api_instance.notifications(factory_id)
     pprint(api_response)
@@ -984,7 +1001,7 @@ Name | Type | Description  | Notes
 
 Returns a Profile object.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -993,17 +1010,18 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id_or_name = 'id_or_name_example' # str | A name or an id of a Profile.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 expand = true # bool | If expand option is set Profile objects will contain all command parameters, even if their value is default. By default this is not set. (optional)
 
-try: 
+try:
     # Returns a Profile object.
     api_response = api_instance.profile(id_or_name, factory_id, expand=expand)
     pprint(api_response)
@@ -1039,7 +1057,7 @@ Name | Type | Description  | Notes
 
 Returns a list of Encodings that belong to a Profile.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1048,16 +1066,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id_or_name = 'id_or_name_example' # str | Id or name of a Profile.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a list of Encodings that belong to a Profile.
     api_response = api_instance.profile_encodings(id_or_name, factory_id)
     pprint(api_response)
@@ -1092,7 +1111,7 @@ Name | Type | Description  | Notes
 
 Returns a collection of Profile objects.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1101,19 +1120,20 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 exclude_advanced_services = true # bool | Determine whether exclude Advanced Services profiles from the results. By default this is not set. (optional)
 expand = true # bool | If expand option is set Profile objects will contain all command parameters, even if their value is default. By default this is not set. (optional)
 page = 56 # int | A page to be fetched. Default is `1`. (optional)
 per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 
-try: 
+try:
     # Returns a collection of Profile objects.
     api_response = api_instance.profiles(factory_id, exclude_advanced_services=exclude_advanced_services, expand=expand, page=page, per_page=per_page)
     pprint(api_response)
@@ -1151,7 +1171,7 @@ Name | Type | Description  | Notes
 
 Returns a collection of Video objects queued for encoding.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1160,17 +1180,18 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 page = 56 # int | A page to be fetched. Default is `1`. (optional)
 per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 
-try: 
+try:
     # Returns a collection of Video objects queued for encoding.
     api_response = api_instance.queued_videos(factory_id, page=page, per_page=per_page)
     pprint(api_response)
@@ -1208,7 +1229,7 @@ Resubmits a video to encode.
 
 Resubmits the video to encode. Please note that this option will work only for videos in `success` status.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1217,16 +1238,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 resubmit_video_body = telestream_cloud_flip.ResubmitVideoBody() # ResubmitVideoBody | 
 
-try: 
+try:
     # Resubmits a video to encode.
     api_instance.resubmit_video(factory_id, resubmit_video_body)
 except ApiException as e:
@@ -1260,7 +1282,7 @@ void (empty response body)
 
 Retries a failed encoding.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1269,16 +1291,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Retries a failed encoding.
     api_response = api_instance.retry_encoding(id, factory_id)
     pprint(api_response)
@@ -1313,7 +1336,7 @@ Name | Type | Description  | Notes
 
 Returns a signed url pointing to an Encoding.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1322,16 +1345,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a signed url pointing to an Encoding.
     api_response = api_instance.signed_encoding_url(id, factory_id)
     pprint(api_response)
@@ -1366,7 +1390,7 @@ Name | Type | Description  | Notes
 
 Returns a list of signed urls pointing to an Encoding's outputs.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1375,16 +1399,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a list of signed urls pointing to an Encoding's outputs.
     api_response = api_instance.signed_encoding_urls(id, factory_id)
     pprint(api_response)
@@ -1419,7 +1444,7 @@ Name | Type | Description  | Notes
 
 Returns a signed url pointing to a Video.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1428,16 +1453,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Video.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a signed url pointing to a Video.
     api_response = api_instance.signed_video_url(id, factory_id)
     pprint(api_response)
@@ -1472,7 +1498,7 @@ Name | Type | Description  | Notes
 
 Toggles synchronisation settings.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1481,16 +1507,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | id of the factory
 factory_sync_body = telestream_cloud_flip.FactorySyncBody() # FactorySyncBody | 
 
-try: 
+try:
     # Toggles synchronisation settings.
     api_response = api_instance.toggle_factory_sync(id, factory_sync_body)
     pprint(api_response)
@@ -1525,7 +1552,7 @@ Name | Type | Description  | Notes
 
 Updates an Encoding
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1534,19 +1561,20 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of an Encoding.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 update_encoding_body = telestream_cloud_flip.UpdateEncodingBody() # UpdateEncodingBody | 
 screenshots = true # bool | Determines whether the response will include screenshots. By default this is not set. (optional)
 precise_status = true # bool | Determines whether the response will include a precise status. By default this is not set. (optional)
 
-try: 
+try:
     # Updates an Encoding
     api_response = api_instance.update_encoding(id, factory_id, update_encoding_body, screenshots=screenshots, precise_status=precise_status)
     pprint(api_response)
@@ -1584,7 +1612,7 @@ Name | Type | Description  | Notes
 
 Updates a Factory's settings. Returns a Factory object.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1593,17 +1621,18 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | id of the factory
 update_factory_body = telestream_cloud_flip.FactoryBody() # FactoryBody | 
 with_storage_provider = true # bool | if set to `true`, results will include a storage provider's id (optional)
 
-try: 
+try:
     # Updates a Factory's settings. Returns a Factory object.
     api_response = api_instance.update_factory(id, update_factory_body, with_storage_provider=with_storage_provider)
     pprint(api_response)
@@ -1639,7 +1668,7 @@ Name | Type | Description  | Notes
 
 Updates a Factory's notification settings.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1648,16 +1677,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 cloud_notification_settings_body = telestream_cloud_flip.CloudNotificationSettings() # CloudNotificationSettings | 
 
-try: 
+try:
     # Updates a Factory's notification settings.
     api_response = api_instance.update_notifications(factory_id, cloud_notification_settings_body)
     pprint(api_response)
@@ -1692,7 +1722,7 @@ Name | Type | Description  | Notes
 
 Updates a given Profile
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1701,19 +1731,20 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | 
 factory_id = 'factory_id_example' # str | Id of a Factory.
 update_profile_body = telestream_cloud_flip.ProfileBody() # ProfileBody | 
 exclude_advanced_services = true # bool |  (optional)
 expand = true # bool | If expand option is set Profile objects will contain all command parameters, even if their value is default. By default this is not set. (optional)
 
-try: 
+try:
     # Updates a given Profile
     api_response = api_instance.update_profile(id, factory_id, update_profile_body, exclude_advanced_services=exclude_advanced_services, expand=expand)
     pprint(api_response)
@@ -1751,7 +1782,7 @@ Name | Type | Description  | Notes
 
 Creates an upload session.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1760,16 +1791,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 video_upload_body = telestream_cloud_flip.VideoUploadBody() # VideoUploadBody | 
 
-try: 
+try:
     # Creates an upload session.
     api_response = api_instance.upload_video(factory_id, video_upload_body)
     pprint(api_response)
@@ -1804,7 +1836,7 @@ Name | Type | Description  | Notes
 
 Returns a Video object.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1813,16 +1845,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Video.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a Video object.
     api_response = api_instance.video(id, factory_id)
     pprint(api_response)
@@ -1857,7 +1890,7 @@ Name | Type | Description  | Notes
 
 Returns a list of Encodings that belong to a Video.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1866,12 +1899,13 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Video.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 page = 56 # int | A page to be fetched. Default is `1`. (optional)
@@ -1879,7 +1913,7 @@ per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 screenshots = true # bool | Determines whether the response will include screenshots. By default this is not set. (optional)
 precise_status = true # bool | Determines whether the response will include a precise status. By default this is not set. (optional)
 
-try: 
+try:
     # Returns a list of Encodings that belong to a Video.
     api_response = api_instance.video_encodings(id, factory_id, page=page, per_page=per_page, screenshots=screenshots, precise_status=precise_status)
     pprint(api_response)
@@ -1918,7 +1952,7 @@ Name | Type | Description  | Notes
 
 Returns a Video's metadata
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1927,16 +1961,17 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 id = 'id_example' # str | Id of a Video.
 factory_id = 'factory_id_example' # str | Id of a Factory.
 
-try: 
+try:
     # Returns a Video's metadata
     api_response = api_instance.video_metadata(id, factory_id)
     pprint(api_response)
@@ -1971,7 +2006,7 @@ Name | Type | Description  | Notes
 
 Returns a collection of Video objects.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -1980,17 +2015,18 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 page = 56 # int | A page to be fetched. Default is `1`. (optional)
 per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 
-try: 
+try:
     # Returns a collection of Video objects.
     api_response = api_instance.videos(factory_id, page=page, per_page=per_page)
     pprint(api_response)
@@ -2026,7 +2062,7 @@ Name | Type | Description  | Notes
 
 Returns a collection of Workflows that belong to a Factory.
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -2035,17 +2071,18 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-telestream_cloud_flip.configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+configuration = telestream_cloud_flip.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# telestream_cloud_flip.configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = telestream_cloud_flip.FlipApi()
+api_instance = telestream_cloud_flip.FlipApi(telestream_cloud_flip.ApiClient(configuration))
 factory_id = 'factory_id_example' # str | Id of a Factory.
 page = 56 # int | A page to be fetched. Default is `1`. (optional)
 per_page = 56 # int | A number of results per page. Default is `100`. (optional)
 
-try: 
+try:
     # Returns a collection of Workflows that belong to a Factory.
     api_response = api_instance.workflows(factory_id, page=page, per_page=per_page)
     pprint(api_response)

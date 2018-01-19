@@ -3,7 +3,7 @@
 """
     Qc API
 
-    QC API
+    QC API  # noqa: E501
 
     OpenAPI spec version: 1.0.0
     Contact: cloudsupport@telestream.net
@@ -13,17 +13,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_qc
+from telestream_cloud_qc.models.job_details_result import JobDetailsResult  # noqa: E501
 from telestream_cloud_qc.rest import ApiException
-from telestream_cloud_qc.models.job_details_result import JobDetailsResult
 
 
 class TestJobDetailsResult(unittest.TestCase):
-    """ JobDetailsResult unit test stubs """
+    """JobDetailsResult unit test stubs"""
 
     def setUp(self):
         pass
@@ -32,11 +30,9 @@ class TestJobDetailsResult(unittest.TestCase):
         pass
 
     def testJobDetailsResult(self):
-        """
-        Test JobDetailsResult
-        """
+        """Test JobDetailsResult"""
         # FIXME: construct object with mandatory attributes with example values
-        #model = telestream_cloud_qc.models.job_details_result.JobDetailsResult()
+        # model = telestream_cloud_qc.models.job_details_result.JobDetailsResult()  # noqa: E501
         pass
 
 

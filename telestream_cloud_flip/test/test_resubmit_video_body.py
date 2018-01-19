@@ -3,7 +3,7 @@
 """
     Flip API
 
-    Description
+    Description  # noqa: E501
 
     OpenAPI spec version: 3.1.0
     Contact: cloudsupport@telestream.net
@@ -13,17 +13,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_flip
+from telestream_cloud_flip.models.resubmit_video_body import ResubmitVideoBody  # noqa: E501
 from telestream_cloud_flip.rest import ApiException
-from telestream_cloud_flip.models.resubmit_video_body import ResubmitVideoBody
 
 
 class TestResubmitVideoBody(unittest.TestCase):
-    """ ResubmitVideoBody unit test stubs """
+    """ResubmitVideoBody unit test stubs"""
 
     def setUp(self):
         pass
@@ -32,11 +30,9 @@ class TestResubmitVideoBody(unittest.TestCase):
         pass
 
     def testResubmitVideoBody(self):
-        """
-        Test ResubmitVideoBody
-        """
+        """Test ResubmitVideoBody"""
         # FIXME: construct object with mandatory attributes with example values
-        #model = telestream_cloud_flip.models.resubmit_video_body.ResubmitVideoBody()
+        # model = telestream_cloud_flip.models.resubmit_video_body.ResubmitVideoBody()  # noqa: E501
         pass
 
 

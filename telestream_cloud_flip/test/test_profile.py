@@ -3,7 +3,7 @@
 """
     Flip API
 
-    Description
+    Description  # noqa: E501
 
     OpenAPI spec version: 3.1.0
     Contact: cloudsupport@telestream.net
@@ -13,17 +13,15 @@
 
 from __future__ import absolute_import
 
-import os
-import sys
 import unittest
 
 import telestream_cloud_flip
+from telestream_cloud_flip.models.profile import Profile  # noqa: E501
 from telestream_cloud_flip.rest import ApiException
-from telestream_cloud_flip.models.profile import Profile
 
 
 class TestProfile(unittest.TestCase):
-    """ Profile unit test stubs """
+    """Profile unit test stubs"""
 
     def setUp(self):
         pass
@@ -32,11 +30,9 @@ class TestProfile(unittest.TestCase):
         pass
 
     def testProfile(self):
-        """
-        Test Profile
-        """
+        """Test Profile"""
         # FIXME: construct object with mandatory attributes with example values
-        #model = telestream_cloud_flip.models.profile.Profile()
+        # model = telestream_cloud_flip.models.profile.Profile()  # noqa: E501
         pass
 
 
