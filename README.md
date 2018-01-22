@@ -34,6 +34,6 @@ This example show uploading media file to flip service. If you want to use other
 
 ## Services
 Api client is divided into parts corresponding to services provided. Currently supported services include:
-- [Flip](telestream_cloud_flip/README.md) - high-volume media transcoding to multiple formats
-- [Timed Text Speech](telestream_cloud_tts/README.md) - automated captions and subtitles creation
-- [Quality Control](telestream_cloud_qc/README.md) - automated quality control for file base media
+- [Flip](telestream_cloud_flip_sdk/README.md) - high-volume media transcoding to multiple formats
+- [Timed Text Speech](telestream_cloud_tts_sdk/README.md) - automated captions and subtitles creation
+- [Quality Control](telestream_cloud_qc_sdk/README.md) - automated quality control for file base media
