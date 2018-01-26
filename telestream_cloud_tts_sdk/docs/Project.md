@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | The ID of the Project. | [optional] 
-**account_id** | **str** | The ID of the Account. | [optional] 
 **name** | **str** | The name of the Project. | [optional] 
 **description** | **str** | The description of the Project. | [optional] 
 **status** | **str** | Determines a stage of training. | [optional] 

@@ -1,6 +1,6 @@
 # telestream_cloud_flip.FlipApi
 
-All URIs are relative to *https://api.cloud.telestream.net/api/flip/3.1*
+All URIs are relative to *https://api.cloud.telestream.net/flip/3.1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

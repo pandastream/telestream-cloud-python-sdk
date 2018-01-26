@@ -115,15 +115,16 @@ class Uploader(object):
                        threads=self.threads
             )
         )
-        for key, extra_file in upload_session.extra_files.items():
-            self.files.append(
-                UploadFile(
-                    upload_session.location, int(extra_file["parts"]),
-                    int(extra_file["part_size"]),
-                    self.tag_path_map.get(extra_file["tag"]), extra_file["tag"],
-                    threads=self.threads
+        if upload_session.extra_files:
+            for key, extra_file in upload_session.extra_files.items():
+                self.files.append(
+                    UploadFile(
+                        upload_session.location, int(extra_file["parts"]),
+                        int(extra_file["part_size"]),
+                        self.tag_path_map.get(extra_file["tag"]), extra_file["tag"],
+                        threads=self.threads
+                    )
                 )
-            )
 
     def __initialize_video_upload_body(self):
         file_name = os.path.basename(self.file_path)
