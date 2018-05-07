@@ -44,7 +44,7 @@ class Job(object):
         'bitrate': 'int',
         'sample_rate': 'int',
         'format': 'str',
-        'file_size': 'str',
+        'file_size': 'int',
         'created_at': 'str',
         'updated_at': 'str'
     }
@@ -434,7 +434,7 @@ class Job(object):
         The file size of the input file.  # noqa: E501
 
         :return: The file_size of this Job.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._file_size
 
@@ -445,7 +445,7 @@ class Job(object):
         The file size of the input file.  # noqa: E501
 
         :param file_size: The file_size of this Job.  # noqa: E501
-        :type: str
+        :type: int
         """
 
         self._file_size = file_size

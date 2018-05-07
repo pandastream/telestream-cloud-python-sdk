@@ -10,10 +10,10 @@ Method | HTTP request | Description
 [**create_job**](TtsApi.md#create_job) | **POST** /projects/{projectID}/jobs | Creates a new Job
 [**create_project**](TtsApi.md#create_project) | **POST** /projects | Creates a new Project
 [**delete_corpus**](TtsApi.md#delete_corpus) | **DELETE** /projects/{projectID}/corpora/{name} | Creates a new Corpus
-[**delete_job**](TtsApi.md#delete_job) | **DELETE** /projects/{projectID}/jobs/{id} | Deletes the Job
+[**delete_job**](TtsApi.md#delete_job) | **DELETE** /projects/{projectID}/jobs/{jobID} | Deletes the Job
 [**delete_project**](TtsApi.md#delete_project) | **DELETE** /projects/{projectID} | Deletes the Project
-[**job**](TtsApi.md#job) | **GET** /projects/{projectID}/jobs/{id} | Returns the Job
-[**job_result**](TtsApi.md#job_result) | **GET** /projects/{projectID}/jobs/{id}/result | Returns the Job Result
+[**job**](TtsApi.md#job) | **GET** /projects/{projectID}/jobs/{jobID} | Returns the Job
+[**job_result**](TtsApi.md#job_result) | **GET** /projects/{projectID}/jobs/{jobID}/result | Returns the Job Result
 [**jobs**](TtsApi.md#jobs) | **GET** /projects/{projectID}/jobs | Returns a collection of Jobs
 [**project**](TtsApi.md#project) | **GET** /projects/{projectID} | Returns the Project
 [**projects**](TtsApi.md#projects) | **GET** /projects | Returns a collection of Projects
@@ -37,7 +37,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -91,7 +91,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -147,7 +147,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -180,7 +180,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -204,7 +204,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -260,7 +260,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -314,7 +314,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -345,7 +345,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -369,7 +369,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -400,7 +400,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -424,7 +424,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -449,7 +449,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -473,7 +473,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -529,7 +529,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -585,7 +585,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -643,7 +643,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -673,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -697,7 +697,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -723,7 +723,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -747,7 +747,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -776,7 +776,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -800,7 +800,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -830,7 +830,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -852,7 +852,7 @@ import telestream_cloud_tts
 from telestream_cloud_tts.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_tts.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 

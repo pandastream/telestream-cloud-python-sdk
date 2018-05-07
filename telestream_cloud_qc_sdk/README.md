@@ -71,7 +71,7 @@ project = 'tg01xxxxxxxxxxxx'
 filepath = "/tmp/video.mp4"
 
 client = qc.QcApi()
-client.configuration.api_key['X-Api-Key'] = api_key
+client.api_client.configuration.api_key['X-Api-Key'] = api_key
 
 upload = qc.Uploader(project, client, filepath, profiles)
 upload.setup()
@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 *QcApi* | [**remove_job**](docs/QcApi.md#remove_job) | **DELETE** /projects/{project_id}/jobs/{job_id}.json | 
 *QcApi* | [**remove_project**](docs/QcApi.md#remove_project) | **DELETE** /projects/{project_id}.json | 
 *QcApi* | [**signed_urls**](docs/QcApi.md#signed_urls) | **GET** /projects/{project_id}/jobs/{job_id}/signed-urls.json | 
+*QcApi* | [**templates**](docs/QcApi.md#templates) | **GET** /templates.json | List all templates
 *QcApi* | [**upload_video**](docs/QcApi.md#upload_video) | **POST** /projects/{project_id}/upload.json | Creates an upload session
 
 
@@ -116,6 +117,7 @@ Class | Method | HTTP request | Description
  - [Options](docs/Options.md)
  - [Project](docs/Project.md)
  - [Proxy](docs/Proxy.md)
+ - [Template](docs/Template.md)
  - [UploadSession](docs/UploadSession.md)
  - [VideoStream](docs/VideoStream.md)
  - [VideoUploadBody](docs/VideoUploadBody.md)
@@ -124,7 +126,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
-## apiKey
+## api_key
 
 - **Type**: API key
 - **API key parameter name**: X-Api-Key

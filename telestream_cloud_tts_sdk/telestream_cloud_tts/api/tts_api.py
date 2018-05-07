@@ -114,7 +114,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/corpora', 'GET',
@@ -221,7 +221,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/corpora/{name}', 'GET',
@@ -336,7 +336,7 @@ class TtsApi(object):
             ['text/plain'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/corpora/{name}', 'POST',
@@ -443,7 +443,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/jobs', 'POST',
@@ -542,7 +542,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects', 'POST',
@@ -649,7 +649,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/corpora/{name}', 'DELETE',
@@ -737,7 +737,7 @@ class TtsApi(object):
         if 'project_id' in params:
             path_params['projectID'] = params['project_id']  # noqa: E501
         if 'job_id' in params:
-            path_params['job_id'] = params['job_id']  # noqa: E501
+            path_params['jobID'] = params['job_id']  # noqa: E501
 
         query_params = []
 
@@ -756,10 +756,10 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
-            '/projects/{projectID}/jobs/{id}', 'DELETE',
+            '/projects/{projectID}/jobs/{jobID}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -847,7 +847,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}', 'DELETE',
@@ -935,7 +935,7 @@ class TtsApi(object):
         if 'project_id' in params:
             path_params['projectID'] = params['project_id']  # noqa: E501
         if 'job_id' in params:
-            path_params['job_id'] = params['job_id']  # noqa: E501
+            path_params['jobID'] = params['job_id']  # noqa: E501
 
         query_params = []
 
@@ -954,10 +954,10 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
-            '/projects/{projectID}/jobs/{id}', 'GET',
+            '/projects/{projectID}/jobs/{jobID}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1042,7 +1042,7 @@ class TtsApi(object):
         if 'project_id' in params:
             path_params['projectID'] = params['project_id']  # noqa: E501
         if 'job_id' in params:
-            path_params['job_id'] = params['job_id']  # noqa: E501
+            path_params['jobID'] = params['job_id']  # noqa: E501
 
         query_params = []
 
@@ -1061,10 +1061,10 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
-            '/projects/{projectID}/jobs/{id}/result', 'GET',
+            '/projects/{projectID}/jobs/{jobID}/result', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1168,7 +1168,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/jobs', 'GET',
@@ -1267,7 +1267,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}', 'GET',
@@ -1358,7 +1358,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects', 'GET',
@@ -1457,7 +1457,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/train', 'POST',
@@ -1556,7 +1556,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}', 'PUT',
@@ -1661,7 +1661,7 @@ class TtsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['apiKey']  # noqa: E501
+        auth_settings = ['api_key']  # noqa: E501
 
         return self.api_client.call_api(
             '/projects/{projectID}/jobs/upload', 'POST',

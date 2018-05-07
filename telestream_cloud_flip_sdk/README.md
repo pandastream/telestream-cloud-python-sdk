@@ -16,7 +16,7 @@ from telestream_cloud_flip.rest import ApiException
 from pprint import pprint
 
 api_instance = telestream_cloud_flip.FlipApi()
-api_instance.configuration.api_key['X-Api-Key'] = '[API KEY]'
+api_instance.api_client.configuration.api_key['X-Api-Key'] = '[API KEY]'
 
 factory_id = '[FACTORY ID]'
 ```

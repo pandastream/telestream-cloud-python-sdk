@@ -16,6 +16,7 @@ Method | HTTP request | Description
 [**remove_job**](QcApi.md#remove_job) | **DELETE** /projects/{project_id}/jobs/{job_id}.json | 
 [**remove_project**](QcApi.md#remove_project) | **DELETE** /projects/{project_id}.json | 
 [**signed_urls**](QcApi.md#signed_urls) | **GET** /projects/{project_id}/jobs/{job_id}/signed-urls.json | 
+[**templates**](QcApi.md#templates) | **GET** /templates.json | List all templates
 [**upload_video**](QcApi.md#upload_video) | **POST** /projects/{project_id}/upload.json | Creates an upload session
 
 
@@ -32,7 +33,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -62,7 +63,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -84,7 +85,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -116,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -138,7 +139,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -168,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -190,7 +191,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -222,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -244,7 +245,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -274,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -296,7 +297,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -334,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -356,7 +357,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -382,7 +383,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -404,7 +405,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -436,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -458,7 +459,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -489,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -511,7 +512,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -541,7 +542,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -563,7 +564,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -591,7 +592,7 @@ void (empty response body)
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -613,7 +614,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -644,7 +645,55 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **templates**
+> list[Template] templates()
+
+List all templates
+
+### Example
+```python
+from __future__ import print_function
+import time
+import telestream_cloud_qc
+from telestream_cloud_qc.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = telestream_cloud_qc.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = telestream_cloud_qc.QcApi(telestream_cloud_qc.ApiClient(configuration))
+
+try:
+    # List all templates
+    api_response = api_instance.templates()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling QcApi->templates: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**list[Template]**](Template.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
@@ -666,7 +715,7 @@ import telestream_cloud_qc
 from telestream_cloud_qc.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: apiKey
+# Configure API key authorization: api_key
 configuration = telestream_cloud_qc.Configuration()
 configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
@@ -698,7 +747,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[apiKey](../README.md#apiKey)
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 
