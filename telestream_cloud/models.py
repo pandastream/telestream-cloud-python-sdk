@@ -109,9 +109,6 @@ class Factory(UpdatableMixin, TelestreamCloudModel):
         self.profiles = ModelAPI(self.credentials, Profile)
 
     def __getattribute__(self, name):
-        # It is simpler to remove one method than add 3 times
-        if name in ['delete']:
-            raise AttributeError("'Factory' object has no attribute '%s'" % name)
         return super(Factory, self).__getattribute__(name)
 
     def get_notifications(self):
