@@ -11,7 +11,8 @@ from .video_upload_body import VideoUploadBody
 
 class Uploader(object):
 
-    def __init__(self, factory_id, api_client, file_path, profiles, extra_files={}, threads=8, **kwargs):
+    def __init__(self, factory_id, api_client, file_path, profiles, extra_files={}, threads=8, progress_cb=None, **kwargs):
+        self.progress_cb = progress_cb
         self.factory_id = factory_id
         self.api_client = api_client
         self.file_path = file_path
@@ -24,7 +25,6 @@ class Uploader(object):
         self.tag_path_map = {}
         self.extra_files = self.__parse_extra_files(extra_files)
         self.location = None
-
 
     def setup(self):
         if self.status == 'created':
@@ -112,7 +112,7 @@ class Uploader(object):
         self.files.append(
             UploadFile(upload_session.location, upload_session.parts,
                        upload_session.part_size, self.file_path, "",
-                       threads=self.threads
+                       threads=self.threads, progress_cb=self.progress_cb
             )
         )
         if upload_session.extra_files:

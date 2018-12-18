@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import telestream_cloud_qc
-from telestream_cloud_qc.models.job_details import JobDetails  # noqa: E501
+from telestream_cloud_qc.models.inline_response_422 import InlineResponse422  # noqa: E501
 from telestream_cloud_qc.rest import ApiException
 
 
-class TestJobDetails(unittest.TestCase):
-    """JobDetails unit test stubs"""
+class TestInlineResponse422(unittest.TestCase):
+    """InlineResponse422 unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestJobDetails(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testJobDetails(self):
-        """Test JobDetails"""
+    def testInlineResponse422(self):
+        """Test InlineResponse422"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = telestream_cloud_qc.models.job_details.JobDetails()  # noqa: E501
+        # model = telestream_cloud_qc.models.inline_response_422.InlineResponse422()  # noqa: E501
         pass
 
 

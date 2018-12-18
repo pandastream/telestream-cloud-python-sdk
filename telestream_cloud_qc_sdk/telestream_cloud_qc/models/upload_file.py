@@ -2,9 +2,10 @@ import threading
 import os
 import requests
 import json
+import itertools
 
 class UploadFile(object):
-    def __init__(self, location, parts, part_size, file_name, tag, threads = 8):
+    def __init__(self, location, parts, part_size, file_name, tag, threads = 8, progress_cb = None):
         self.location = location
         self.file_name = file_name
         self.file_size = os.stat(file_name).st_size
@@ -20,7 +21,9 @@ class UploadFile(object):
 
         self.n_threads = threads
         self.lock = threading.Lock()
-
+        self.progress_cb = progress_cb
+        self.cnt = itertools.count()
+        next(self.cnt)
 
     def read_chunks(self):
         while True:
@@ -55,6 +58,12 @@ class UploadFile(object):
                 'X-Part' : str(i),
                 'Content-Length' : str(min(self.part_size, len(chunk))), },
                                 data = chunk)
+
+            if self.progress_cb:
+                try:
+                    self.progress_cb(next(self.cnt), self.parts)
+                except:
+                    pass
 
             if res.text and json.loads(res.text)["status"] in ("processing"):
                 self.status = "uploaded"

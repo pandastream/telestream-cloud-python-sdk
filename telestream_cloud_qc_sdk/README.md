@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 *QcApi* | [**create_project**](docs/QcApi.md#create_project) | **POST** /projects.json | Create a new project
 *QcApi* | [**get_job**](docs/QcApi.md#get_job) | **GET** /projects/{project_id}/jobs/{job_id}.json | Get QC job
 *QcApi* | [**get_project**](docs/QcApi.md#get_project) | **GET** /projects/{project_id}.json | Get project by Id
+*QcApi* | [**import_template**](docs/QcApi.md#import_template) | **POST** /projects/import.json | Import Vidchecker template
 *QcApi* | [**list_jobs**](docs/QcApi.md#list_jobs) | **GET** /projects/{project_id}/jobs.json | Get jobs form projects
 *QcApi* | [**list_projects**](docs/QcApi.md#list_projects) | **GET** /projects.json | List all projects for an account
 *QcApi* | [**modify_project**](docs/QcApi.md#modify_project) | **PUT** /projects/{project_id}.json | Modify project
@@ -108,10 +109,13 @@ Class | Method | HTTP request | Description
  - [Data](docs/Data.md)
  - [Data1](docs/Data1.md)
  - [ExtraFile](docs/ExtraFile.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse422](docs/InlineResponse422.md)
  - [Job](docs/Job.md)
  - [JobData](docs/JobData.md)
  - [JobDetails](docs/JobDetails.md)
  - [JobDetailsResult](docs/JobDetailsResult.md)
+ - [JobDetailsSynchonizationEvents](docs/JobDetailsSynchonizationEvents.md)
  - [JobsCollection](docs/JobsCollection.md)
  - [Media](docs/Media.md)
  - [Options](docs/Options.md)

@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**create_project**](QcApi.md#create_project) | **POST** /projects.json | Create a new project
 [**get_job**](QcApi.md#get_job) | **GET** /projects/{project_id}/jobs/{job_id}.json | Get QC job
 [**get_project**](QcApi.md#get_project) | **GET** /projects/{project_id}.json | Get project by Id
+[**import_template**](QcApi.md#import_template) | **POST** /projects/import.json | Import Vidchecker template
 [**list_jobs**](QcApi.md#list_jobs) | **GET** /projects/{project_id}/jobs.json | Get jobs form projects
 [**list_projects**](QcApi.md#list_projects) | **GET** /projects.json | List all projects for an account
 [**modify_project**](QcApi.md#modify_project) | **PUT** /projects/{project_id}.json | Modify project
@@ -280,6 +281,60 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_template**
+> list[InlineResponse200] import_template(name=name, file=file)
+
+Import Vidchecker template
+
+### Example
+```python
+from __future__ import print_function
+import time
+import telestream_cloud_qc
+from telestream_cloud_qc.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = telestream_cloud_qc.Configuration()
+configuration.api_key['X-Api-Key'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = telestream_cloud_qc.QcApi(telestream_cloud_qc.ApiClient(configuration))
+name = 'name_example' # str |  (optional)
+file = '/path/to/file.txt' # file |  (optional)
+
+try:
+    # Import Vidchecker template
+    api_response = api_instance.import_template(name=name, file=file)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling QcApi->import_template: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **str**|  | [optional] 
+ **file** | **file**|  | [optional] 
+
+### Return type
+
+[**list[InlineResponse200]**](InlineResponse200.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: text/xml
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
