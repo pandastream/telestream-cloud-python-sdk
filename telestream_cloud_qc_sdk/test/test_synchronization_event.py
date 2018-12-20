@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import telestream_cloud_qc
-from telestream_cloud_qc.models.job import Job  # noqa: E501
+from telestream_cloud_qc.models.synchronization_event import SynchronizationEvent  # noqa: E501
 from telestream_cloud_qc.rest import ApiException
 
 
-class TestJob(unittest.TestCase):
-    """Job unit test stubs"""
+class TestSynchronizationEvent(unittest.TestCase):
+    """SynchronizationEvent unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestJob(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testJob(self):
-        """Test Job"""
+    def testSynchronizationEvent(self):
+        """Test SynchronizationEvent"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = telestream_cloud_qc.models.job.Job()  # noqa: E501
+        # model = telestream_cloud_qc.models.synchronization_event.SynchronizationEvent()  # noqa: E501
         pass
 
 
