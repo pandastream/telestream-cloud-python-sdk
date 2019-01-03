@@ -99,6 +99,9 @@ class UploadFile(object):
                     self.missing_parts = json_data['missing_parts']
                     self.missing_parts.reverse()
                     raise TelestreamCloudException('Failed to upload some parts, missing parts: %s' % self.missing_parts)
+                elif 'media_id' in json_data and json_data['media_id']:
+                    self.status = "uploaded"
+                    self.video_id = json_data['media_id']
         else:
             raise KeyError("Already started")
 
