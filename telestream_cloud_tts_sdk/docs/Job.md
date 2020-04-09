@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | The ID of the job. | [optional] 
+**id** | **str** | The ID of the job. | [optional] [readonly] 
 **name** | **str** | The name of the job. | [optional] 
 **original_filename** | **str** | The name of the input file | [optional] 
-**project_id** | **str** | The ID of the project. | [optional] 
+**project_id** | **str** | The ID of the project. | [optional] [readonly] 
 **source_url** | **str** | The URL of source file. | [optional] 
 **status** | **str** | Determines the state of transcription job. | [optional] 
 **error** | **str** | If the status of the job is &#39;error&#39;, returns the state of job. | [optional] 
@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **sample_rate** | **int** | The sample rate of the input audio. | [optional] 
 **format** | **str** | The format of the input audio. | [optional] 
 **file_size** | **int** | The file size of the input file. | [optional] 
+**custom_words** | **str** | Words used for model training, separated by space. | [optional] 
 **created_at** | **str** | A date and time when the job was created | [optional] 
 **updated_at** | **str** | A date and time when the job was updated | [optional] 
 

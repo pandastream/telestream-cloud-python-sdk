@@ -18,19 +18,41 @@ or directly from GitHub:
 ### Usage
 This example show uploading media file to flip service. If you want to use other service refer to [services](#services).
 
-    import telestream_cloud_flip as flip
+```python
+import telestream_cloud_flip as flip
 
-    api_key = 'tcs_xxx'
-    factory = 'tg01xxxxxxxxxxxx'
-    profiles = "h264,imx"
-    filepath = "/tmp/video.mp4"
+api_key = "tcs_XXX"
 
-    client = flip.FlipApi()
-    client.api_client.configuration.api_key['X-Api-Key'] = api_key
+client = flip.FlipApi()
+client.api_client.configuration.api_key['X-Api-Key'] = api_key
 
-    upload = flip.Uploader(factory, client, filepath, profiles)
-    upload.setup()
-    video_id = upload.start()
+source_url = "https://storage.cloud.google.com/debug_videos/panda.mp4"
+
+create_video_body = flip.CreateVideoBody(
+    source_url = source_url,
+    profiles = "h264"
+)
+
+factory_id = "test"
+
+video = client.create_video(factory_id, create_video_body)
+
+encodings_list = client.list_video_encodings(video.id, factory_id)
+encoding_id = encodings_list.encodings[0].id
+print("Created encoding with ID: " + encoding_id)
+
+while True:
+    time.sleep(5)
+    encoding = client.get_encoding(encoding_id, factory_id)
+    print("status=" + encoding.status)
+    if encoding.status == "fail":
+        break
+    if encoding.status == "success":
+        signed_url_resp = client.signed_encoding_url(encoding_id, factory_id)
+        print("Output URL: " + signed_url_resp.signed_url)
+        break
+```
+
 
 ## Services
 Api client is divided into parts corresponding to services provided. Currently supported services include:

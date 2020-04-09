@@ -1,5 +1,6 @@
 # Media
 
+Description of the processed media file.
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

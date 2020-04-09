@@ -11,9 +11,11 @@ Name | Type | Description | Notes
 **extra_files** | **dict(str, list[str])** |  | [optional] 
 **extra_variables** | **dict(str, str)** |  | [optional] 
 **path_format** | **str** |  | [optional] 
-**clip_end** | **str** | Clip ends at a specific time. | [optional] 
+**clip_end** | **str** | Clip ends at a specific time (timecode). | [optional] 
 **clip_length** | **str** | A clip’s duration. | [optional] 
 **clip_offset** | **str** | Clip starts at a specific offset. | [optional] 
+**starting_timecode** | **str** |  | [optional] 
+**store_id** | **str** | An individual store_id for this video processing. If provided will replace store_id from cloud factory but must match underlying cloud provider and region. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

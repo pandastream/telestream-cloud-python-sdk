@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **str** | [read-only] Subscription identifier  | [optional] 
-**type** | **str** | [required] Type of subscription (email, webhook)  | [optional] 
-**topic** | [**Topic**](Topic.md) | [required]  | [optional] 
-**params** | [**Params**](Params.md) | [required]  | [optional] 
+**id** | **str** | [read-only] Subscription identifier  | [optional] [readonly] 
+**type** | **str** | Type of subscription (email, webhook, sns, aeg, pubsub)  | 
+**topic** | [**Topic**](Topic.md) |  | 
+**params** | [**Params**](Params.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
